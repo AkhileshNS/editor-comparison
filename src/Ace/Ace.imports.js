@@ -1,5 +1,6 @@
 // IMPORT LANGUAGE TOOLS
 import 'ace-builds/src-min-noconflict/ext-language_tools';
+import 'ace-builds/src-min-noconflict/ext-emmet';
 
 // IMPORT THEMES
 import 'ace-builds/src-min-noconflict/theme-ambiance.js';

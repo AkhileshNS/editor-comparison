@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import AceEditor from 'react-ace';
+import { UnControlled as CodeMirror } from 'react-codemirror2';
+import 'codemirror/lib/codemirror.css';
 
-import './Ace.imports';
-import { themes, languages } from './Ace.constants';
+import './Codemirror.imports';
+import { themes, languages } from './Codemirror.constants';
 import { getModeForPath } from 'ace-builds/src-min-noconflict/ext-modelist';
 
-const Ace = () => {
+const Codemirror = () => {
   const [value, setValue] = React.useState('');
   const [themeValue, setTheme] = React.useState(themes[0]);
   const [lang, setLang] = React.useState(languages[0]);
@@ -25,8 +26,8 @@ const Ace = () => {
   };
 
   return (
-    <div className='ace'>
-      <div>
+    <div className='codemirror'>
+      <div style={{ marginBottom: '32px' }}>
         <Link to='/'>Back to Homepage</Link>
         <input
           style={{ marginLeft: '16px' }}
@@ -50,31 +51,17 @@ const Ace = () => {
           ))}
         </select>
       </div>
-      <AceEditor
-        style={{
-          width: '100%',
-          height: 'calc(100% - 38px)',
-          marginTop: '16px',
-        }}
-        fontSize='20px'
-        mode={lang}
-        theme={themeValue}
+      <CodeMirror
         value={value}
-        onChange={(newValue) => setValue(newValue)}
-        name='ACE_EDITOR'
-        editorProps={{ $blockScrolling: true }}
-        setOptions={{
-          enableBasicAutocompletion: true,
-          enableLiveAutocompletion: true,
-          enableSnippets: true,
-          showLineNumbers: true,
-          tabSize: 2,
-          enableEmmet: true,
+        options={{
+          mode: lang,
+          theme: themeValue,
+          lineNumbers: true,
         }}
-        showPrintMargin={false}
+        onChange={(_, __, newValue) => setValue(newValue)}
       />
     </div>
   );
 };
 
-export default Ace;
+export default Codemirror;

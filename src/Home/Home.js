@@ -8,6 +8,8 @@ const Home = () => {
       <Link to='/ace'>Ace Editor</Link>
       <br />
       <Link to='/monaco'>Monaco Editor</Link>
+      <br />
+      <Link to='/codemirror'>Codemirror Editor</Link>
     </div>
   );
 };
