@@ -4,7 +4,6 @@ import AceEditor from 'react-ace';
 
 import './Ace.imports';
 import { themes, languages } from './Ace.constants';
-import 'ace-builds/src-noconflict/mode-java';
 
 const Ace = () => {
   const [value, setValue] = React.useState('');
@@ -38,6 +37,7 @@ const Ace = () => {
           height: 'calc(100% - 38px)',
           marginTop: '16px',
         }}
+        fontSize='20px'
         mode={lang}
         theme={themeValue}
         value={value}
