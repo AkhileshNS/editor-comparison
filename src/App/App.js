@@ -7,7 +7,7 @@ import Monaco from 'Monaco/Monaco';
 
 function App() {
   return (
-    <div className='App'>
+    <div className='app'>
       <Router>
         <Switch>
           <Route path='/ace' component={Ace} />
