@@ -35,7 +35,6 @@ import 'codemirror/addon/lint/json-lint';
 import 'codemirror/addon/lint/yaml-lint';
 import 'codemirror/addon/lint/lint';
 import 'codemirror/addon/merge/merge';
-import 'codemirror/addon/mode/loadmode';
 import 'codemirror/addon/mode/multiplex';
 import 'codemirror/addon/mode/overlay';
 import 'codemirror/addon/mode/simple';
