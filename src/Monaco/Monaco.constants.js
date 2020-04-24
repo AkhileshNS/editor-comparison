@@ -1,4 +1,4 @@
-export const languages = [
+const languages = [
   'abap',
   'apex',
   'azcli',
@@ -65,7 +65,9 @@ export const languages = [
   'yaml',
 ];
 
-export const themes = {
+const themes = {
+  'vs-light': 'VS Light',
+  'vs-dark': 'VS Dark',
   active4d: 'Active4D',
   'all-hallows-eve': 'All Hallows Eve',
   amy: 'Amy',
@@ -116,7 +118,7 @@ export const themes = {
   monoindustrial: 'monoindustrial',
 };
 
-export const options = {
+const options = {
   acceptSuggestionOnCommitCharacter: true,
   acceptSuggestionOnEnter: 'on',
   accessibilitySupport: 'auto',
@@ -173,4 +175,54 @@ export const options = {
   wordWrapColumn: 80,
   wordWrapMinified: true,
   wrappingIndent: 'none',
+};
+
+const features = [
+  'accessibilityHelp',
+  'bracketMatching',
+  'caretOperations',
+  'clipboard',
+  'codeAction',
+  'codelens',
+  'colorDetector',
+  'comment',
+  'contextmenu',
+  'coreCommands',
+  'cursorUndo',
+  'dnd',
+  'find',
+  'folding',
+  'fontZoom',
+  'format',
+  'gotoError',
+  'gotoLine',
+  'gotoSymbol',
+  'hover',
+  'iPadShowKeyboard',
+  'inPlaceReplace',
+  'inspectTokens',
+  'linesOperations',
+  'links',
+  'multicursor',
+  'parameterHints',
+  'quickCommand',
+  'quickOutline',
+  'referenceSearch',
+  'rename',
+  'smartSelect',
+  'snippets',
+  'suggest',
+  'toggleHighContrast',
+  'toggleTabFocusMode',
+  'transpose',
+  'wordHighlighter',
+  'wordOperations',
+  'wordPartOperations',
+];
+
+module.exports = {
+  features,
+  languages,
+  themes,
+  options,
 };
